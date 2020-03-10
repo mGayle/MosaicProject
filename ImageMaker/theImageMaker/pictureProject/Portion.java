@@ -22,7 +22,14 @@ public class Portion extends InputImage{
 		distArray.clear();
 	};
 	
-	
+	Portion(List<Integer> portionAves) throws IOException{
+		//super(tempImage);
+		//InSet.aveArray.forEach(entry -> EuclCalc(entry, this.imageAves)); 	//make distance array
+		InSet.aveArray.forEach(entry -> EuclCalc(entry, portionAves)); 	//make distance array
+		getMatch(InSet.imageList, Portion.distArray);			// get matching image
+		writePixelsToMosaicBuff();
+		distArray.clear();
+	};
 	
 	
     public static void EuclCalc(List<Integer> aves, List<Integer> testAves) {

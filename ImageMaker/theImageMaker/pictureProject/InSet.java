@@ -51,15 +51,11 @@ public class InSet {
 
 		// Resize input images. Make smaller and uniform
 	    public void resizeImages() throws IOException {
-	    	long resizeStart = System.nanoTime();
 	    	for(Path path : imagePaths) 
 			{
 				resizedImagePath = resizedDirPath + "\\" + path.getFileName();
 				resize(path.toString(), resizedImagePath, SET_WIDTH, SET_HEIGHT);
 			}
-	    	long resizeEnd = System.nanoTime();
-	    	long totalResizeTime = resizeEnd - resizeStart; 
-	    	System.out.println("totalResizeTime: " + totalResizeTime);
 	    }
 	    
 	    /**

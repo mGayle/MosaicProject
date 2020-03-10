@@ -14,6 +14,8 @@ import javax.imageio.ImageIO;
 
 public class InputImage {
 
+	
+	
 	public List<Integer> imageAves; 		// 1D array for individual InputImage object's rgb average
 
 	
@@ -39,7 +41,7 @@ public class InputImage {
 	
     InputImage(String fileStringC) throws IOException{    	
     	pathString = fileStringC; 
-		getImage(fileStringC);			// dont really need this?  
+		getImage(fileStringC);			  
 		getAve(); 						// get image's average rgb. add to class ave array. Index corresponds to InputImage list index.
     }
     
